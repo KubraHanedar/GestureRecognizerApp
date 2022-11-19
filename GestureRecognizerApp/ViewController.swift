@@ -18,9 +18,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageView.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changePic))
+        imageView.addGestureRecognizer(gestureRecognizer)
     }
 
-
+    @objc func changePic() {
+        
+        imageView.image = UIImage(named: "harry")
+        nameLabel.text = "Harry"
+        
+    }
+        
     
 }
 
