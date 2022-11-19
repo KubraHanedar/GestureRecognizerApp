@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
+   
+    var isTaylor = true
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,11 +25,16 @@ class ViewController: UIViewController {
 
     @objc func changePic() {
         
-        imageView.image = UIImage(named: "harry")
-        nameLabel.text = "Harry"
-        
+        if isTaylor == true {
+            imageView.image = UIImage(named: "taylor")
+            nameLabel.text = "Taylor"
+            isTaylor = false
+        } else {
+            imageView.image = UIImage(named: "harry")
+            nameLabel.text = "Harry"
+            isTaylor = true
+        }
     }
-        
     
 }
 
